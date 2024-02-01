@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(53, 158, 243);
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        padding-top: 14rem;
+    }
+
+    span {
+        font-size: 2rem;
+        color: black;
+        font-weight: bold;
+        padding-right: 1rem;
+    }
+
+    input {
+        height: 20px;
+        width: 150px;
+        padding: 5px;
+        border: 2px solid black;
+        font-size: .7rem;
+        border-radius: 5px;
+    }
+
+    .div {
+        border: 6px solid rgb(231, 234, 62);
+        border-style: double;
+        background-color: rgb(149, 158, 240);
+        border-top-right-radius: 44px;
+        border-bottom-left-radius: 44px;
+        padding: 1.2rem;
+        height: 270px;
+        width: 680px;
+    }
+
+    div {
+        border: 6px solid grey;
+        border-style: dashed;
+        border-radius: 8px;
+        background-color: rgba(236, 222, 232, 0.556);
+        height: 100px;
+        width: 500px;
+        padding: 5rem;
+    }
+</style>
+
+<body>
+    <div class="div">
+        <div>
+            <span>Celsius Point : </span> <input type="number" id="userval" placeholder="Enter Celsius Value">
+            <p id="showrs"></p>
+            <button onclick="showrs()">Click to change Fehrenheit</button>
+        </div>
+    </div>
+
+    <script>
+        function showrs() {
+            let a = document.getElementById("userval").value;
+            let c = (9 / 5 * parseInt(a)) + 32
+            document.getElementById("showrs").innerHTML = `<i>${c} :- Celsius changed on Fehrenheit</i>`;
+            document.getElementById("showrs").style.color = "red";
+            document.getElementById("showrs").style.fontSize = `${ 1.2 } rem`;
+        }
+    </script>
+</body>
+
+</html>
